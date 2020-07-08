@@ -1,13 +1,10 @@
-# GitHub Action - Get a Releases
-This GitHub Action gets the info of the latest release
-
-## Usage
+# GitHub Action to Help Getting The Latest Release Info
 
 Add this step in your workflow file
 ```yaml
 - name: Gets latest created release info
   id: latest_release_info
-  uses: jossef/action-latest_release_info@v1.0.0
+  uses: jossef/action-latest-release-info@v1.1.0
   env:
     GITHUB_TOKEN: ${{ github.token }}
 ```
@@ -55,7 +52,7 @@ jobs:
 
     - name: Gets latest created release info
       id: latest_release_info
-      uses: jossef/action-latest_release_info@v1.0.0
+      uses: jossef/action-latest-release-info@v1.1.0
  
     - name: Upload asset to github release page
       id: upload-release-asset
