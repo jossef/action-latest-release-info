@@ -1,0 +1,27 @@
+{
+  "name": "action-latest-release-info",
+  "version": "1.0.0",
+  "description": "Get the latest release upload url, tag, date",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build src/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jossef/action-latest-release-info"
+  },
+  "keywords": [
+    "actions",
+    "node"
+  ],
+  "author": "GitHub",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@actions/exec": "^1.0.3",
+    "@actions/github": "^2.1.1"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.20.4"
+  }
+}
