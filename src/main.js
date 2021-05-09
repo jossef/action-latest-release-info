@@ -18,8 +18,9 @@ async function run() {
         let tagName = releaseInfo.data.tag_name;
         let name = releaseInfo.data.name;
         let createdAt = releaseInfo.data.created_at;
+        let draft = releaseInfo.data.draft
 
-        console.log(`Got release info: '${name}', '${tagName}', '${releaseId}', '${htmlUrl}', '${uploadUrl}', '${createdAt}'`);
+        console.log(`Got release info: '${name}', '${tagName}', '${releaseId}', '${htmlUrl}', '${uploadUrl}', '${createdAt}', 'draft:${draft}'`);
 
         core.setOutput("id", releaseId);
         core.setOutput("html_url", htmlUrl);
@@ -27,7 +28,7 @@ async function run() {
         core.setOutput("tag_name", tagName);
         core.setOutput("created_at", createdAt);
         core.setOutput("name", name);
-
+        core.setOutput("draft", draft)
     } catch (error) {
         console.log(error);
         core.setFailed(error.message);
