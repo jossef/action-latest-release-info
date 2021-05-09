@@ -14,7 +14,7 @@ outputs:
     description: 'The name of the release'
   created_at:
     description: 'The creation date of the release'
-  created_at:
+  draft:
     description: 'The draft of the release'
 runs:
   using: 'node12'
