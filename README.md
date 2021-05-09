@@ -17,11 +17,12 @@ Add this step in your workflow file
 - `tag_name`: The name of the tag linked with the release
 - `name`: The name of the release
 - `created_at`: The creation date of the release
+- `draft`: The draft of the release
 
 output variables can be accessed after the step is completed via `${{ steps.latest_release_info.outputs.<variable name> }}`
 
 
-#### Example - Accessing Output Variables 
+#### Example - Accessing Output Variables
 
 
 ```yaml
@@ -43,7 +44,7 @@ jobs:
     steps:
     - name: Checkout code
     - uses: actions/checkout@v2
- 
+
     - name: Build
     # TODO fill in with a step that builds something into ./dist/output.tar
 
@@ -53,12 +54,12 @@ jobs:
     - name: Gets latest created release info
       id: latest_release_info
       uses: jossef/action-latest-release-info@v1.1.0
- 
+
     - name: Upload asset to github release page
       id: upload-release-asset
       uses: actions/upload-release-asset@v1
       with:
-        upload_url: ${{ steps.latest_release_info.outputs.upload_url }} 
+        upload_url: ${{ steps.latest_release_info.outputs.upload_url }}
         asset_path: ./dist/output.tar
         asset_name: output_${{ steps.latest_release_info.outputs.tag_name }}.tar
         asset_content_type: application/x-tar
