@@ -4,7 +4,7 @@ Add this step in your workflow file
 ```yaml
 - name: Gets latest created release info
   id: latest_release_info
-  uses: jossef/action-latest-release-info@v1.1.0
+  uses: jossef/action-latest-release-info@v1.2.1
   env:
     GITHUB_TOKEN: ${{ github.token }}
 ```
@@ -53,7 +53,7 @@ jobs:
 
     - name: Gets latest created release info
       id: latest_release_info
-      uses: jossef/action-latest-release-info@v1.1.0
+      uses: jossef/action-latest-release-info@v1.2.1
 
     - name: Upload asset to github release page
       id: upload-release-asset
