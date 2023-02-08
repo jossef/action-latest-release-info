@@ -53,7 +53,7 @@ jobs:
 
     - name: Gets latest created release info
       id: latest_release_info
-      uses: jossef/action-latest-release-info@v1.2.1
+      uses: jossef/action-latest-release-info@v1.2.2
 
     - name: Upload asset to github release page
       id: upload-release-asset
